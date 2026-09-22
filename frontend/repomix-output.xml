@@ -143,6 +143,23 @@ src/
     hero.png
     react.svg
     vite.svg
+  components/
+    layout/
+      BottomTabBar.css
+      BottomTabBar.tsx
+  lib/
+    pricing.ts
+  screens/
+    Calculadora/
+      Calculadora.css
+      Calculadora.tsx
+    Resultado/
+      Resultado.css
+      Resultado.tsx
+  styles/
+    theme.css
+  type/
+    pricing.ts
   App.css
   App.tsx
   index.css
@@ -1257,6 +1274,734 @@ ext {
 <svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
 </file>
 
+<file path="src/components/layout/BottomTabBar.css">
+.bottom-tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.bottom-tab-bar__item {
+  flex: 1;
+  padding: 14px 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.bottom-tab-bar__item.is-active {
+  color: var(--accent-strong);
+  border-top: 2px solid var(--accent);
+}
+
+.bottom-tab-bar__item:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+</file>
+
+<file path="src/components/layout/BottomTabBar.tsx">
+import './BottomTabBar.css';
+
+export type TabKey = 'calculadora' | 'resultado';
+
+interface Tab {
+  key: TabKey;
+  label: string;
+  disabled?: boolean;
+}
+
+interface BottomTabBarProps {
+  tabs: Tab[];
+  activeTab: TabKey;
+  onChange: (tab: TabKey) => void;
+}
+
+export default function BottomTabBar({ tabs, activeTab, onChange }: BottomTabBarProps) {
+  return (
+    <nav className="bottom-tab-bar">
+      {tabs.map((tab) => (
+        <button
+          key={tab.key}
+          className={`bottom-tab-bar__item ${activeTab === tab.key ? 'is-active' : ''}`}
+          onClick={() => onChange(tab.key)}
+          disabled={tab.disabled}
+          type="button"
+        >
+          {tab.label}
+        </button>
+      ))}
+    </nav>
+  );
+}
+</file>
+
+<file path="src/lib/pricing.ts">
+import type { PricingInput, PricingResult } from '../types/pricing';
+
+/**
+ * Precio material   = costo filamento/kg x (gramos / 1000)
+ * Precio luz        = precio kWh x (watts impresora / 1000) x horas totales
+ * Margen de error   = (material + luz) x % margen de error
+ * Subtotal          = material + luz + margen de error
+ * Precio marcado    = subtotal x multiplicador de ganancia
+ * Total a cobrar    = precio marcado + consumos extra
+ */
+export function calculatePrice(input: PricingInput): PricingResult {
+  const totalHours = input.printHours + input.extraMinutes / 60;
+
+  const materialCost = input.filamentCostPerKg * (input.filamentGrams / 1000);
+  const electricityCost = input.kwhPrice * (input.printerWatts / 1000) * totalHours;
+
+  const baseBeforeError = materialCost + electricityCost;
+  const errorBuffer = baseBeforeError * (input.errorMarginPercent / 100);
+  const subtotal = baseBeforeError + errorBuffer;
+
+  const markedUpPrice = subtotal * input.profitMultiplier;
+  const finalPrice = markedUpPrice + input.extraCosts;
+
+  return {
+    materialCost,
+    electricityCost,
+    errorBuffer,
+    subtotal,
+    markedUpPrice,
+    finalPrice,
+    input,
+  };
+}
+
+export function formatCurrency(amount: number, currency: string): string {
+  try {
+    return new Intl.NumberFormat('es-CL', {
+      style: 'currency',
+      currency,
+      maximumFractionDigits: 2,
+    }).format(amount);
+  } catch {
+    return `${amount.toFixed(2)} ${currency}`;
+  }
+}
+</file>
+
+<file path="src/screens/Calculadora/Calculadora.css">
+.calculadora {
+  padding: 24px 16px 100px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.calculadora h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 20px;
+  color: var(--text);
+}
+
+.calculadora__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 18px;
+}
+
+.card h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.card__label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+
+.card__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 420px) {
+  .card__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.field__hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.field input,
+.field select {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft-bg);
+}
+
+.multiplier-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 420px) {
+  .multiplier-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.multiplier-btn {
+  padding: 10px 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.multiplier-btn.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text-on);
+}
+
+.references-toggle {
+  margin-top: 14px;
+  background: none;
+  border: none;
+  color: var(--accent-strong);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.references-list {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.calculadora__submit {
+  margin-top: 4px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--accent);
+  color: var(--accent-text-on);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.calculadora__submit:hover {
+  background: var(--accent-strong);
+}
+</file>
+
+<file path="src/screens/Calculadora/Calculadora.tsx">
+import { useState } from 'react';
+import type { PricingInput } from '../../type/pricing';
+import { CURRENCIES, PROFIT_MULTIPLIERS } from '../../type/pricing';
+import './Calculadora.css';
+
+interface CalculadoraProps {
+  onCalculate: (input: PricingInput) => void;
+}
+
+const initialInput: PricingInput = {
+  currency: 'CLP',
+  filamentCostPerKg: 15000,
+  kwhPrice: 250,
+  printerWatts: 45,
+  errorMarginPercent: 10,
+  printHours: 2,
+  extraMinutes: 0,
+  filamentGrams: 30,
+  extraCosts: 0,
+  profitMultiplier: 4,
+};
+
+const MULTIPLIER_REFERENCES: { value: number; label: string }[] = [
+  { value: 2, label: 'Alto volumen / descuento' },
+  { value: 2.5, label: 'Volumen medio' },
+  { value: 3, label: 'Mayorista' },
+  { value: 3.5, label: 'Intermedio' },
+  { value: 4, label: 'Minorista' },
+  { value: 5, label: 'Llaveros / piezas chicas' },
+];
+
+export default function Calculadora({ onCalculate }: CalculadoraProps) {
+  const [input, setInput] = useState<PricingInput>(initialInput);
+  const [showReferences, setShowReferences] = useState(true);
+
+  const update = <K extends keyof PricingInput>(key: K, value: PricingInput[K]) => {
+    setInput((prev) => ({ ...prev, [key]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onCalculate(input);
+  };
+
+  return (
+    <div className="calculadora">
+      <h1>Cotizador 3D</h1>
+
+      <form onSubmit={handleSubmit} className="calculadora__form">
+        <label className="field">
+          Moneda
+          <select
+            value={input.currency}
+            onChange={(e) => update('currency', e.target.value)}
+          >
+            {CURRENCIES.map((c) => (
+              <option key={c.code} value={c.code}>
+                {c.label}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <section className="card">
+          <h2>Costos fijos</h2>
+          <div className="card__grid">
+            <label className="field">
+              Precio del filamento (por kg)
+              <input
+                type="number"
+                min={0}
+                value={input.filamentCostPerKg}
+                onChange={(e) => update('filamentCostPerKg', Number(e.target.value))}
+              />
+            </label>
+
+            <label className="field">
+              Precio del kWh
+              <input
+                type="number"
+                min={0}
+                value={input.kwhPrice}
+                onChange={(e) => update('kwhPrice', Number(e.target.value))}
+              />
+            </label>
+
+            <label className="field">
+              Consumo de la impresora (W)
+              <input
+                type="number"
+                min={0}
+                value={input.printerWatts}
+                onChange={(e) => update('printerWatts', Number(e.target.value))}
+              />
+            </label>
+
+            <label className="field">
+              Margen de error (%)
+              <input
+                type="number"
+                min={0}
+                value={input.errorMarginPercent}
+                onChange={(e) => update('errorMarginPercent', Number(e.target.value))}
+              />
+            </label>
+          </div>
+        </section>
+
+        <section className="card">
+          <h2>Pieza</h2>
+          <div className="card__grid">
+            <label className="field">
+              Horas de impresión
+              <input
+                type="number"
+                min={0}
+                step={0.1}
+                value={input.printHours}
+                onChange={(e) => update('printHours', Number(e.target.value))}
+              />
+            </label>
+
+            <label className="field">
+              Minutos adicionales
+              <input
+                type="number"
+                min={0}
+                value={input.extraMinutes}
+                onChange={(e) => update('extraMinutes', Number(e.target.value))}
+              />
+            </label>
+
+            <label className="field">
+              Gramos de filamento
+              <input
+                type="number"
+                min={0}
+                value={input.filamentGrams}
+                onChange={(e) => update('filamentGrams', Number(e.target.value))}
+              />
+            </label>
+
+            <label className="field">
+              Consumos extra
+              <input
+                type="number"
+                min={0}
+                value={input.extraCosts}
+                onChange={(e) => update('extraCosts', Number(e.target.value))}
+              />
+            </label>
+          </div>
+        </section>
+
+        <section className="card">
+          <h2>Margen de ganancia</h2>
+          <p className="card__label">Multiplicador</p>
+          <div className="multiplier-grid">
+            {PROFIT_MULTIPLIERS.map((m) => (
+              <button
+                key={m}
+                type="button"
+                className={`multiplier-btn ${input.profitMultiplier === m ? 'is-active' : ''}`}
+                onClick={() => update('profitMultiplier', m)}
+              >
+                ×{m}
+              </button>
+            ))}
+          </div>
+
+          <label className="field">
+            Personalizado
+            <span className="field__hint">Si necesitás otro valor, ingresalo acá (ej: 2.8).</span>
+            <input
+              type="number"
+              min={0}
+              step={0.1}
+              value={input.profitMultiplier}
+              onChange={(e) => update('profitMultiplier', Number(e.target.value))}
+            />
+          </label>
+
+          <button
+            type="button"
+            className="references-toggle"
+            onClick={() => setShowReferences((v) => !v)}
+          >
+            {showReferences ? '▴' : '▾'} Referencias
+          </button>
+
+          {showReferences && (
+            <ul className="references-list">
+              {MULTIPLIER_REFERENCES.map((r) => (
+                <li key={r.value}>
+                  ×{r.value.toFixed(1)} → {r.label}
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+
+        <button type="submit" className="calculadora__submit">
+          Calcular precio
+        </button>
+      </form>
+    </div>
+  );
+}
+</file>
+
+<file path="src/screens/Resultado/Resultado.css">
+.resultado {
+  padding: 24px 16px 100px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.resultado h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--text);
+}
+
+.resultado__breakdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.resultado__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.resultado__row:last-child {
+  border-bottom: none;
+}
+
+.resultado__row--total {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.resultado__total {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--accent-soft-bg);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+}
+
+.resultado__total-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent-strong);
+}
+
+.resultado__total-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.resultado__back {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.resultado--empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 80px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.resultado--empty button {
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+</file>
+
+<file path="src/screens/Resultado/Resultado.tsx">
+import type { PricingResult } from '../../types/pricing';
+import { formatCurrency } from '../../lib/pricing';
+import './Resultado.css';
+
+interface ResultadoProps {
+  result: PricingResult | null;
+  onBack: () => void;
+}
+
+export default function Resultado({ result, onBack }: ResultadoProps) {
+  if (!result) {
+    return (
+      <div className="resultado resultado--empty">
+        <p>Todavía no hay ninguna cotización calculada.</p>
+        <button onClick={onBack} type="button">
+          Ir a la calculadora
+        </button>
+      </div>
+    );
+  }
+
+  const { currency } = result.input;
+
+  return (
+    <div className="resultado">
+      <h1>Resultados</h1>
+
+      <div className="card resultado__breakdown">
+        <div className="resultado__row">
+          <span>Precio material</span>
+          <span>{formatCurrency(result.materialCost, currency)}</span>
+        </div>
+        <div className="resultado__row">
+          <span>Precio luz</span>
+          <span>{formatCurrency(result.electricityCost, currency)}</span>
+        </div>
+        <div className="resultado__row">
+          <span>Margen de error</span>
+          <span>{formatCurrency(result.errorBuffer, currency)}</span>
+        </div>
+        <div className="resultado__row resultado__row--total">
+          <span>Subtotal</span>
+          <span>{formatCurrency(result.subtotal, currency)}</span>
+        </div>
+        <div className="resultado__row">
+          <span>Precio marcado (×{result.input.profitMultiplier})</span>
+          <span>{formatCurrency(result.markedUpPrice, currency)}</span>
+        </div>
+        <div className="resultado__row">
+          <span>Consumos extra</span>
+          <span>{formatCurrency(result.input.extraCosts, currency)}</span>
+        </div>
+      </div>
+
+      <div className="resultado__total">
+        <span className="resultado__total-label">TOTAL A COBRAR</span>
+        <span className="resultado__total-value">
+          {formatCurrency(result.finalPrice, currency)}
+        </span>
+      </div>
+
+      <button className="resultado__back" onClick={onBack} type="button">
+        Calcular otra pieza
+      </button>
+    </div>
+  );
+}
+</file>
+
+<file path="src/styles/theme.css">
+/* Paleta minimalista estilo Claude.ai, con acento verde suave en vez de naranjo */
+:root {
+  --bg: #F7F6F1;
+  --surface: #FFFFFF;
+  --surface-muted: #F1EFE7;
+  --border: #E5E2D8;
+  --text: #23221E;
+  --text-muted: #78766D;
+
+  --accent: #6E9A72;
+  --accent-strong: #4F7A54;
+  --accent-soft-bg: #E7EFE5;
+  --accent-text-on: #FFFFFF;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(35, 34, 30, 0.05), 0 1px 3px rgba(35, 34, 30, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+}
+</file>
+
+<file path="src/type/pricing.ts">
+export interface Currency {
+  code: string;
+  label: string;
+}
+
+export const CURRENCIES: Currency[] = [
+  { code: 'CLP', label: 'Peso chileno (CLP)' },
+  { code: 'USD', label: 'Dólar (USD)' },
+  { code: 'MXN', label: 'Peso mexicano (MXN)' },
+  { code: 'ARS', label: 'Peso argentino (ARS)' },
+  { code: 'COP', label: 'Peso colombiano (COP)' },
+  { code: 'PEN', label: 'Sol peruano (PEN)' },
+];
+
+export const PROFIT_MULTIPLIERS = [2, 2.5, 3, 3.5, 4, 5] as const;
+
+export interface PricingInput {
+  currency: string;             // código de moneda seleccionado (CLP, USD, ...)
+
+  // Costos fijos
+  filamentCostPerKg: number;    // costo del filamento por kg
+  kwhPrice: number;             // precio del kWh
+  printerWatts: number;         // consumo de la impresora en watts
+  errorMarginPercent: number;   // % extra para cubrir fallos
+
+  // Pieza
+  printHours: number;           // horas de impresión
+  extraMinutes: number;         // minutos adicionales
+  filamentGrams: number;        // gramos de filamento usados
+  extraCosts: number;           // consumos extra (CLP$ u otra moneda), se suman al total final
+
+  // Margen de ganancia
+  profitMultiplier: number;     // multiplicador: uno de PROFIT_MULTIPLIERS o un valor personalizado
+}
+
+export interface PricingResult {
+  materialCost: number;
+  electricityCost: number;
+  errorBuffer: number;
+  subtotal: number;       // material + luz + margen de error
+  markedUpPrice: number;  // subtotal x multiplicador de ganancia
+  finalPrice: number;     // markedUpPrice + consumos extra
+  input: PricingInput;
+}
+</file>
+
 <file path="src/App.css">
 .counter {
   font-size: 16px;
@@ -1445,128 +2190,41 @@ ext {
 </file>
 
 <file path="src/App.tsx">
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import BottomTabBar, { type TabKey } from './components/layout/BottomTabBar';
+import Calculadora from './screens/Calculadora/Calculadora';
+import Resultado from './screens/Resultado/Resultado';
+import { calculatePrice } from './lib/pricing';
+import type { PricingResult } from './types/pricing';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [activeTab, setActiveTab] = useState<TabKey>('calculadora');
+  const [result, setResult] = useState<PricingResult | null>(null);
+
+  const handleCalculate: React.ComponentProps<typeof Calculadora>['onCalculate'] = (input) => {
+    setResult(calculatePrice(input));
+    setActiveTab('resultado');
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="app">
+      {activeTab === 'calculadora' && <Calculadora onCalculate={handleCalculate} />}
+      {activeTab === 'resultado' && (
+        <Resultado result={result} onBack={() => setActiveTab('calculadora')} />
+      )}
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      <BottomTabBar
+        activeTab={activeTab}
+        onChange={setActiveTab}
+        tabs={[
+          { key: 'calculadora', label: 'Calculadora' },
+          { key: 'resultado', label: 'Resultado' },
+        ]}
+      />
+    </div>
+  );
 }
-
-export default App
 </file>
 
 <file path="src/index.css">

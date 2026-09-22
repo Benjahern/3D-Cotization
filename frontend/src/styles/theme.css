@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Design tokens — Cotizador 3D
+   Dirección de arte: papel cálido, sobrio y calmado (referencia Claude.ai).
+   Un solo acento (verde salvia), usado con moderación.
+   Tema claro por defecto + oscuro automático. Contraste AA.
+   ========================================================================== */
+
+:root {
+  /* Superficies / papel */
+  --bg: #faf9f5;
+  --surface: #ffffff;
+  --surface-2: #f6f5f0;
+  --surface-muted: #f1efe8;
+  --surface-sunken: #eae8e0;
+
+  /* Bordes: finos y cálidos */
+  --border: #e9e6dd;
+  --border-strong: #dcd8cc;
+
+  /* Texto (salvia/ink cálido) */
+  --text: #3b382c;
+  --text-muted: #6b6757;
+  --text-subtle: #767262;
+
+  /* Acento (verde salvia) — usar con moderación */
+  --accent: #5c7f66;
+  --accent-strong: #3f5c47;
+  --accent-soft: #eef2ec;
+  --accent-soft-border: #d9e3d7;
+  --focus-ring: rgba(92, 127, 102, 0.2);
+
+  /* Botón primario (sólido) */
+  --primary-bg: #4a6b52;
+  --primary-bg-hover: #3f5c47;
+  --primary-bg-active: #35503c;
+  --primary-text: #ffffff;
+
+  /* Estados semánticos */
+  --danger: #a03d2e;
+  --danger-soft: #f7ebe7;
+  --danger-border: #e8cfc7;
+  --warning: #8a5a00;
+
+  /* Radios contenidos */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* Espaciado */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Sombras: casi ausentes (se prefiere borde fino) */
+  --shadow-sm: 0 1px 2px rgba(59, 56, 44, 0.04);
+  --shadow-md: 0 2px 10px -2px rgba(59, 56, 44, 0.08);
+  --shadow-lg: 0 8px 24px -10px rgba(59, 56, 44, 0.14);
+
+  /* Tipografía */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-serif: ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+
+  --text-xs: 11.5px;
+  --text-sm: 13px;
+  --text-base: 14.5px;
+  --text-md: 16px;
+  --text-lg: 19px;
+  --text-xl: 22px;
+  --text-display: 38px;
+
+  --transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151512;
+    --surface: #1d1c18;
+    --surface-2: #222120;
+    --surface-muted: #272620;
+    --surface-sunken: #2c2b25;
+
+    --border: #2f2d27;
+    --border-strong: #3e3c34;
+
+    --text: #e9e7dd;
+    --text-muted: #a7a294;
+    --text-subtle: #928d7e;
+
+    --accent: #8fb398;
+    --accent-strong: #a9c9b0;
+    --accent-soft: #242b24;
+    --accent-soft-border: #35402f;
+    --focus-ring: rgba(143, 179, 152, 0.25);
+
+    --primary-bg: #7fa886;
+    --primary-bg-hover: #8fb398;
+    --primary-bg-active: #6f9a78;
+    --primary-text: #16180f;
+
+    --danger: #e08a78;
+    --danger-soft: #332420;
+    --danger-border: #4a332c;
+    --warning: #d8ab63;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 2px 10px -2px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 8px 24px -10px rgba(0, 0, 0, 0.5);
+  }
+}

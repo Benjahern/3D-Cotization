@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Pantalla: Calculadora
+   ========================================================================== */
+
+.calc {
+  padding: var(--space-5) var(--space-4) 0;
+}
+
+.calc__lead {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+  line-height: 1.5;
+}
+
+.calc__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* --- Multiplicador ------------------------------------------------------- */
+
+.calc__multipliers {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+@media (max-width: 420px) {
+  .calc__multipliers {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.multiplier {
+  padding: 9px 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition);
+}
+
+.multiplier:hover {
+  border-color: var(--text-subtle);
+  color: var(--text);
+}
+
+.multiplier.is-active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  font-weight: 600;
+}
+
+.calc__selection {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.calc__selection strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* --- Referencias --------------------------------------------------------- */
+
+.calc__refs {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-3);
+}
+
+.calc__refs-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.calc__refs-toggle:hover {
+  color: var(--text);
+}
+
+.calc__refs-toggle svg {
+  transition: transform var(--transition);
+}
+
+.calc__refs-toggle.is-open svg {
+  transform: rotate(180deg);
+}
+
+.calc__refs-list {
+  list-style: none;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.calc__refs-list li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.calc__refs-value {
+  flex: none;
+  min-width: 34px;
+  color: var(--text);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Acciones ------------------------------------------------------------ */
+
+.calc__alert {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--danger-soft);
+  border: 1px solid var(--danger-border);
+  color: var(--danger);
+  font-size: var(--text-sm);
+}
+
+.calc__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+
+.calc__actions .btn--primary {
+  padding: 13px 16px;
+}

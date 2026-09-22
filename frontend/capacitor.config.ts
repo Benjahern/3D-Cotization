@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.example.app',
+  appId: 'cl.3dcotization.frontend',
   appName: 'frontend',
   webDir: 'dist'
 };

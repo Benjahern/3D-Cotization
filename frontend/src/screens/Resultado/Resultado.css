@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Pantalla: Resultado
+   ========================================================================== */
+
+.res {
+  padding: var(--space-5) var(--space-4) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* --- Total --------------------------------------------------------------- */
+
+.res__total {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.res__total-label {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.res__total-value {
+  margin-top: var(--space-1);
+  font-size: var(--text-display);
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.res__total-note {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+/* --- Desglose ------------------------------------------------------------ */
+
+.res__rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.res__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--text-base);
+}
+
+.res__row:last-child {
+  border-bottom: none;
+}
+
+.res__row-label {
+  color: var(--text-muted);
+}
+
+.res__row-value {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.res__row--subtotal {
+  margin-top: var(--space-1);
+  border-top: 1px solid var(--border-strong);
+}
+
+.res__row--subtotal .res__row-label,
+.res__row--subtotal .res__row-value {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.res__row--gain .res__row-value {
+  color: var(--accent-strong);
+}
+
+/* --- Estado vacío -------------------------------------------------------- */
+
+.res--empty {
+  align-items: center;
+  text-align: center;
+  padding-top: 84px;
+}
+
+.res__empty-title {
+  font-size: var(--text-xl);
+  color: var(--text);
+}
+
+.res__empty-text {
+  max-width: 290px;
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.res--empty .btn {
+  margin-top: var(--space-5);
+}

@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Botones
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 11px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-base);
+  font-weight: 500;
+  white-space: nowrap;
+  user-select: none;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn__icon {
+  display: grid;
+  place-items: center;
+}
+
+.btn--primary {
+  background: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: var(--primary-bg-hover);
+}
+
+.btn--primary:active:not(:disabled) {
+  background: var(--primary-bg-active);
+}
+
+.btn--secondary {
+  background: var(--surface);
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background: var(--surface-muted);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

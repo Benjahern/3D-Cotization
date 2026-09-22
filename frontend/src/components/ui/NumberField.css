@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Campo de formulario (numérico, con unidad y validación)
+   ========================================================================== */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field__label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.field__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field__control input,
+.field__control select {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--text-base);
+  font-variant-numeric: tabular-nums;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.field__control.has-unit input {
+  padding-right: 54px;
+}
+
+.field__control input:hover,
+.field__control select:hover {
+  border-color: var(--text-subtle);
+}
+
+.field__control input:focus,
+.field__control select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.field__unit {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  font-size: var(--text-xs);
+  color: var(--text-subtle);
+  pointer-events: none;
+}
+
+.field__hint,
+.field__error {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-xs);
+  line-height: 1.4;
+}
+
+.field__hint {
+  color: var(--text-subtle);
+}
+
+.field__error {
+  color: var(--danger);
+  font-weight: 500;
+}
+
+.field__control.has-error input {
+  border-color: var(--danger-border);
+  background: var(--danger-soft);
+}
+
+/* Quita las flechas nativas en navegadores WebKit (menos ruido visual) */
+.field__control input[type='number']::-webkit-outer-spin-button,
+.field__control input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.field__control input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
