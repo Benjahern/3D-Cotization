@@ -27,6 +27,9 @@ importers:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.11.0)
+      '@rolldown/binding-linux-arm64-gnu':
+        specifier: ^1.2.9
+        version: 1.2.9
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.6
@@ -1588,8 +1591,7 @@ snapshots:
   '@rolldown/binding-linux-arm-gnueabihf@1.2.9':
     optional: true
 
-  '@rolldown/binding-linux-arm64-gnu@1.2.9':
-    optional: true
+  '@rolldown/binding-linux-arm64-gnu@1.2.9': {}
 
   '@rolldown/binding-linux-arm64-musl@1.2.9':
     optional: true
