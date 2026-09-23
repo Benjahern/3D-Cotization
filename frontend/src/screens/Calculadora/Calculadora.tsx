@@ -56,6 +56,7 @@ export default function Calculadora({ input, onChange, onCalculate }: Calculador
       return;
     }
     onCalculate();
+    window.clarity?.('event', 'calculo_realizado');
   };
 
   const handleReset = () => {
@@ -176,7 +177,10 @@ export default function Calculadora({ input, onChange, onCalculate }: Calculador
                   key={m}
                   type="button"
                   className={`multiplier${isActive ? ' is-active' : ''}`}
-                  onClick={() => update('profitMultiplier', m)}
+                  onClick={() => {
+                    update('profitMultiplier', m);
+                    window.clarity?.('event', 'cambio_multiplicador');
+                  }}
                   aria-pressed={isActive}
                 >
                   ×{m}
@@ -202,7 +206,10 @@ export default function Calculadora({ input, onChange, onCalculate }: Calculador
             unit="×"
             step={0.1}
             value={input.profitMultiplier}
-            onChange={(v) => update('profitMultiplier', v)}
+            onChange={(v) => {
+              update('profitMultiplier', v);
+              window.clarity?.('event', 'cambio_multiplicador');
+            }}
             error={visibleErrors.profitMultiplier}
           />
 

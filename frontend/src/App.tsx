@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import BottomTabBar, { type TabKey } from './components/layout/BottomTabBar';
+import Footer from './components/layout/Footer';
 import Calculadora from './screens/Calculadora/Calculadora';
 import Resultado from './screens/Resultado/Resultado';
 import { CalculatorIcon, ReceiptIcon } from './components/icons';
@@ -41,6 +42,7 @@ export default function App() {
         ) : (
           <Resultado result={result} onBack={() => setActiveTab('calculadora')} />
         )}
+        <Footer />
       </main>
 
       <BottomTabBar

@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Footer — aviso de analítica
+   ========================================================================== */
+
+.app-footer {
+  padding: var(--space-3) var(--space-5) var(--space-4);
+  text-align: center;
+}
+
+.app-footer__text {
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--text-muted);
+}
